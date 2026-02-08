@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  position: fixed;
+  width: 100%;
+  background: #020617;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.logo {
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeIn 1s ease;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.hero p {
+  margin: 15px 0;
+  opacity: 0.8;
+}
+
+.btn {
+  background: #38bdf8;
+  color: #020617;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+}
+
+/* Sections */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.dark {
+  background: #020617;
+}
+
+.skills span {
+  display: inline-block;
+  background: #38bdf8;
+  color: #020617;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 20px;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #020617;
+  padding: 25px;
+  width: 260px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #020617;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
